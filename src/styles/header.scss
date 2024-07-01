@@ -1,0 +1,140 @@
+@import 'variables';
+@import 'mixins';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: $background;
+    color: $white;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &-link {
+            display: flex;
+            align-items: center;
+        }
+
+        &-img {
+            width: 40px;
+            height: auto;
+        }
+
+        &-text {
+            font-size: $titleText;
+            color: $mainOrange;
+            margin-left: 10px;
+        }
+    }
+
+    &__nav {
+        position: relative;
+
+        &-list {
+            z-index: 10;
+            display: none;
+            list-style: none;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            right: -50px;
+            background: $background;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        &-item {
+            margin: 0 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-link {
+                color: $white;
+                text-decoration: none;
+                font-size: $innerText;
+            }
+
+            &:hover {
+                border-bottom: 4px solid $mainOrange;
+                width: 60px;
+            }
+
+            &:hover:last-child {
+                border-bottom: none;
+                width: inherit;
+                background-color: #FF5D00;
+                border-radius: 1rem;
+            }
+        }
+
+
+
+
+        &-button {
+            width: 90px;
+            height: 2rem;
+            font-size: $buttonSmallText;
+        }
+
+    }
+
+    &__burger-checkbox {
+        display: none;
+
+        &:checked~.header__nav-list {
+            display: flex;
+        }
+    }
+
+    &__burger-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__burger-icon {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 720px) {
+    .header__logo-img {
+        width: 60px;
+    }
+
+    .header__logo-text {
+        font-size: $header3Text;
+    }
+
+    .header__burger-icon {
+        width: 60px;
+    }
+}
+
+@media (min-width: 1139px) {
+    .header__nav-list {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .header__logo-img {
+        width: 60px;
+    }
+
+    .header__burger-label {
+        display: none;
+    }
+}

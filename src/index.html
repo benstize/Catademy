@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <title>Catademy</title>
+</head>
+
+<body class="container">
+    <header class="header span-6">
+        <div class="header__logo">
+            <a href="#" class="header__logo-link">
+                <img src="./public/icons/image 1.png" alt="logo" class="header__logo-img">
+            </a>
+            <h1 class="header__logo-text">Catademy</h1>
+        </div>
+        <div class="header__nav">
+            <input type="checkbox" id="burger-toggle" class="header__burger-checkbox">
+            <label for="burger-toggle" class="header__burger-label">
+                <img src="./public/icons/Frame.png" alt="menu icon" class="header__burger-icon">
+            </label>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">About</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Lessons</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Gallery</a></li>
+                <li class="header__nav-item"><button class="buttonOrange header__nav-button">Subscribe</button></li>
+            </ul>
+        </div>
+    </header>
+    <section class="intro span-6">
+        <div class="container wrap">
+            <div class="intro__image span-3">
+                <img src="./public/cats/introCat.png" alt="Cute Cat with Megaphone">
+            </div>
+            <div class="intro__content span-5">
+                <h1 class="intro__title">Your puRRRfect educator</h1>
+                <div class="intro__subtitle">
+                    <p class="intro__subtitle-text">Let’s study, watch cool content and just have some fun
+                        together</p>
+                    <img class="cat-article" src="/src/public/icons/intro-article-cat.png" alt="" srcset="">
+                </div>
+                <div class="intro__button">
+                    <button class="intro__button-item">Subscribe</button>
+                    <button class="intro__button-item">Watch intro</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="info-section span-6">
+        <div class="info__stats">
+            <div class="stat__item">
+                <div class="stat__item-icon">🎓</div>
+                <div class="stat__item-title">Students</div>
+                <div class="stat__item-value">8500+</div>
+            </div>
+            <div class="stat__item">
+                <div class="stat__item-icon">📚</div>
+                <div class="stat__item-title">Lessons</div>
+                <div class="stat__item-value">200+</div>
+            </div>
+            <div class="stat__item">
+                <div class="stat__item-icon">👍</div>
+                <div class="stat__item-title">Likes</div>
+                <div class="stat__item-value">99k+</div>
+            </div>
+        </div>
+        <div class="info__comments">
+            <div class="comment-slider">
+                <div class="comment" id="comment1">
+                    <img src="/src/public/avatars/1.png" alt="John Doe" class="comment__photo">
+                    <div class="comment__info">
+                        <div class="comment__author">John Doe</div>
+                        <div class="comment__text">It was really cool experience, I love it so much!</div>
+                    </div>
+                </div>
+
+                <!-- <div class="comment" id="comment2">
+                    <img src="/src/public/avatars/2.png" alt="Sarah Smith" class="comment__photo">
+                    <div class="comment__info">
+                        <div class="comment__author">Sarah Smith</div>
+                        <div class="comment__text">I’ve really enjoyed the lessons and the videos are so fun! I’ll
+                            recommend it to my friends!</div>
+                    </div>
+                </div>
+
+                <div class="comment" id="comment3">
+                    <img src="/src/public/avatars/3.png" alt="Sam Kollins" class="comment__photo">
+                    <div class="comment__info">
+                        <div class="comment__author">Sam Kollins</div>
+                        <div class="comment__text">Every day I’m trying to find some time and watch few lessons. It’s
+                            hilarious!</div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="slider-controls">
+                <!-- Radio inputs -->
+                <input type="radio" name="slider" id="slide1" checked>
+                <label for="slide1" class="dot"></label>
+
+                <input type="radio" name="slider" id="slide2">
+                <label for="slide2" class="dot"></label>
+
+                <input type="radio" name="slider" id="slide3">
+                <label for="slide3" class="dot"></label>
+            </div>
+        </div>
+    </section>
+
+    <section class="opportunities span-6">
+        <h2 class="opportunities__title">Explore all opportunities of Catademy</h2>
+        <p class="opportunities__subtitle">
+            You can find here tons of useful information and interesting, fun content. All in one place. Let's go!
+        </p>
+        <div class="opportunities__list">
+            <div class="opportunity">
+                <img src="/src/public/cats/catathouse.png" alt="catathouse" class="opportunity__image">
+                <div class="opportunity__background">
+                    <h3 class="opportunity__title">Group lessons</h3>
+                    <p class="opportunity__description">
+                        Make new friends, join teams and learn in a fun and productive way. We are waiting for you!
+                    </p>
+                </div>
+            </div>
+            <div class="opportunity">
+                <img src="/src/public/cats/catspaceship.png" alt="catspaceship" class="opportunity__image">
+                <div class="opportunity__background">
+                    <h3 class="opportunity__title">Videos</h3>
+                    <p class="opportunity__description">
+                        Search among more than 500 videos and you will definitely find something interesting for you.
+                    </p>
+                </div>
+            </div>
+            <div class="opportunity">
+                <img src="/src/public/cats/knittingCat.png" alt="knittingCat" class="opportunity__image">
+                <div class="opportunity__background">
+                    <h3 class="opportunity__title">Quizzes</h3>
+                    <p class="opportunity__description">
+                        Test your knowledge in various tests and quizzes personally selected for you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery span-6">
+        <h2 class="gallery__title">Enjoy Our Gallery</h2>
+        <h3 class="gallery__subtitle">Do not be shy to review and like the photos</h3>
+        <div class="gallery__photos">
+            <div class="photo">
+                <img src="/src/public/cats/cat1.png" alt="cat1">
+            </div>
+            <div class="photo">
+                <img src="/src/public/cats/cat2.png" alt="cat2">
+            </div>
+            <div class="photo">
+                <img src="/src/public/cats/cat3.png" alt="cat3">
+            </div>
+            <div class="photo">
+                <img src="/src/public/cats/cat4.png" alt="cat4">
+            </div>
+            <div class="photo">
+                <img src="/src/public/cats/cat5.png" alt="cat5">
+            </div>
+            <div class="photo">
+                <img src="/src/public/cats/cat6.png" alt="cat6">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="subscribe span-6">
+        <img src="/src/public/cats/catwithlaptop.png" alt="Subscribe Image" class="subscribe__image">
+        <div class="wrapper">
+            <h1 class="subscribe__title">You are in great paws!</h1>
+            <p class="subscribe__subtitle">
+                Subscribe to get more information about upcoming courses and new videos.
+            </p>
+            <p class="subscribe__subtitle-hidden">You will also get an opportunity to share with other users your unique
+                knowledge by writing articles and posting video lessons!</p>
+            <div class="subscribe__buttons">
+                <input type="email" class="subscribe__email" placeholder="Your email address">
+                <button class="subscribe__button">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer span-6">
+        <div class="footer__social">
+            <a href="#" class="social__link">
+                <img src="/src/public/icons/youtube.png" alt="youtube">
+            </a>
+            <a href="#" class="social__link">
+                <img src="/src/public/icons/instagram.png" alt="Instagram">
+            </a>
+            <a href="#" class="social__link">
+                <img src="/src/public/icons/facebook.png" alt="facebook">
+            </a>
+        </div>
+        <nav class="footer__nav">
+            <a href="#" class="footer__link">Contacts</a>
+            <a href="#" class="footer__link">FAQ</a>
+            <a href="#" class="footer__link">Privacy policy</a>
+            <a href="#" class="footer__link">Terms & Conditions</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixins';
+@import 'grid';
+@import 'header';
+@import 'intro';
+@import 'info';
+@import 'opportunities';
+@import 'gallery';
+@import 'subscribe';
+@import 'footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  @include righteous-regular;
+  background: $background;
+  color: $white;
+}
+
+h1 {
+  font-size: $header3Text;
+}
+
+h2 {
+  font-size: $header2Text;
+}
+
+h3 {
+  font-size: $header3Text;
+}
+
+p {
+  font-size: $innerSmallText;
+}
+
+button {
+  cursor: pointer;
+}
+
+.buttonOrange {
+  @include buttonFilled;
+}

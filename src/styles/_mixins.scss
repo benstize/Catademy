@@ -1,0 +1,57 @@
+@import 'variables';
+
+@mixin righteous-regular {
+  font-family: $righteous;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin ubuntu-regular {
+  font-family: $ubuntu;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin buttonFilled {
+  background-color: $mainOrange;
+  color: $white;
+  border-radius: 1rem;
+}
+
+@mixin button {
+  background-color: transparent;
+  color: $mainOrange;
+  border-radius: 20px;
+
+}
+
+@mixin buttonOrng-styles($font-size, $padding) {
+  background-color: $mainOrange;
+  border: none;
+  border-radius: 1rem;
+  color: $white;
+  padding: $padding;
+  font-size: $font-size;
+  cursor: pointer;
+  margin: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin buttonTrnsprnt-styles($font-size, $padding) {
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  color: $mainOrange;
+  padding: $padding;
+  font-size: $font-size;
+  cursor: pointer;
+  margin: 10px;
+  border: 1px solid $mainOrange;
+
+  &:focus {
+    outline: none;
+  }
+}

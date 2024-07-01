@@ -1,0 +1,217 @@
+@import 'variables';
+
+
+.cat-article {
+    display: none;
+}
+
+.intro {
+    position: relative;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    &__image {
+        margin-top: -90px;
+        position: relative;
+        top: 90px;
+    }
+
+    &__content {
+        text-align: center;
+        background: $backgroundPurple;
+        border-radius: 1rem;
+    }
+
+    &__title {
+        margin-top: 5rem;
+    }
+
+    &__subtitle {
+        align-self: center;
+        padding: 10px;
+
+        &-text {
+            align-self: center;
+        }
+    }
+
+    &__button {
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+
+        &-item {
+            width: 80%;
+        }
+
+        &-item:first-child {
+            @include buttonOrng-styles(1rem, 10px);
+            font-size: $buttonSmallText;
+        }
+
+        &-item:nth-child(2) {
+            @include buttonTrnsprnt-styles(1rem, 10px);
+            position: relative;
+            margin-top: 0;
+            font-size: $buttonSmallText;
+            padding: 10px;
+
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                filter: invert(35%) sepia(89%) saturate(7413%) hue-rotate(358deg) brightness(101%) contrast(105%);
+                background-image: url("/src/public/icons/play_circle_outline_icon.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 50px;
+                top: 48%;
+                transform: translateY(-50%);
+            }
+        }
+
+
+
+    }
+
+}
+
+@media (min-width: 720px) {
+
+    .cat-article {
+        display: block;
+    }
+
+
+    .intro {
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+
+
+        &__content {
+            padding: 1rem;
+
+        }
+
+        &__image {
+            align-self: flex-start;
+        }
+
+        &__title {
+            margin-top: 0rem;
+
+        }
+
+        &__subtitle {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0.2rem;
+        }
+
+
+        &__button {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            margin-bottom: 0;
+
+            &-item {
+                align-self: center;
+                text-align: center;
+
+                &:nth-child(2) {
+                    top: 5px
+                }
+
+                &:nth-child(2)::before {
+                    content: "";
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    filter: invert(35%) sepia(89%) saturate(7413%) hue-rotate(358deg) brightness(101%) contrast(105%);
+                    background-image: url("/src/public/icons/play_circle_outline_icon.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 10px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1140px) {
+
+    .wrap {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .intro {
+        display: grid;
+
+
+        &__content {
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        &__title {
+            margin: 1rem;
+            font-size: $header1Text;
+        }
+
+        &__subtitle {
+            margin: 1rem;
+            padding: 1rem;
+
+            &-text {
+                font-size: $titleText;
+            }
+        }
+
+        &__image {
+            margin: 0;
+            top: 0;
+            align-self: center;
+
+            img {
+                width: 400px;
+                height: 500px;
+            }
+        }
+
+        &__button {
+            margin: 3rem;
+
+            &-item {
+                max-width: 200px;
+            }
+        }
+    }
+
+
+
+}
+

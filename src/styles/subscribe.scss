@@ -1,0 +1,169 @@
+.subscribe {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid $mainOrange;
+
+    &__image {
+        position: relative;
+        margin-top: -95px;
+        top: 95px;
+    }
+
+    .subscribe__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: $backgroundPurple;
+        height: 320px;
+        padding: 1rem;
+        border-radius: 1rem;
+
+
+    }
+
+    &__title {
+        font-size: $titleText;
+        margin-top: 3rem;
+        width: 70%;
+    }
+
+    &__subtitle {
+        margin: 1rem 0;
+        font-size: $innerSmallText;
+
+        &-hidden {
+            display: none;
+        }
+    }
+
+    &__email,
+    &__button {
+        width: 90%;
+        align-self: center;
+        height: 2rem;
+        border-radius: 1rem;
+    }
+
+    &__email {
+        padding-left: 1rem;
+    }
+
+    &__button {
+        @include buttonOrng-styles($buttonSmallText, 0);
+    }
+}
+
+
+@media (min-width:720px) {
+    .subscribe {
+        &__image {
+            width: 350px;
+            height: 350px;
+            margin-top: -130px;
+            top: 150px;
+            left: 375px;
+        }
+
+        .wrapper {
+            margin-top: 2rem;
+            height: 280px;
+            padding-left: 2rem;
+        }
+
+        &__title {
+            font-size: $header3Text;
+            margin-top: 0;
+        }
+
+        &__subtitle {
+            margin: 0;
+            margin-top: 1rem;
+            font-size: $innerText;
+
+            &-hidden {
+                width: 95%;
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .subscribe__buttons {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+
+
+        &__email {
+            padding: 0;
+            margin: 0;
+            width: 70%;
+            height: 3rem;
+            padding-left: 3rem;
+            font-size: $innerText;
+            border: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &__button {
+            width: 30%;
+            height: 3rem;
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+
+@media (min-width:1140px) {
+    .subscribe {
+        &__image {
+            width: 550px;
+            height: 550px;
+            margin-top: -400px;
+            top: 400px;
+            left: 720px;
+        }
+
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: $backgroundPurple;
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: 1rem;
+
+        }
+
+        &__title {
+            width: 70%;
+        }
+
+        &__subtitle {
+            &-hidden {
+                width: 70%;
+            }
+        }
+
+        .subscribe__buttons {
+            margin-top: 2rem;
+            width: 70%;
+        }
+    }
+}

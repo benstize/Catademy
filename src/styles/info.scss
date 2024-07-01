@@ -1,0 +1,223 @@
+@import 'variables'; // Import your variables here if needed
+@import 'mixins'; // Import your mixins here if needed
+
+
+.info-section {
+    background: $backgroundPurple;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+
+}
+
+.info__stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    border-bottom: 2px solid $white;
+    margin-bottom: 20px;
+
+    .stat__item {
+        font-size: $buttonText;
+        min-width: 90%;
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+}
+
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    &__info {
+        padding-left: 1rem;
+
+    }
+
+    &__author {
+        font-size: $buttonText;
+        padding-bottom: 0.3rem;
+    }
+
+    &__text {
+        font-size: $innerSmallText;
+    }
+}
+
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.dot {
+    margin: 0.15rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+.dot {
+    background-color: #E25300;
+    border-color: #E25300;
+}
+
+
+#slide1:active~.comment-slider #comment1,
+#slide2:checked~.comment-slider #comment2,
+#slide3:checked~.comment-slider #comment3 {
+    display: flex;
+}
+
+
+@media (min-width: 720px) {
+
+    .info-section {
+        max-width: 720px;
+
+
+    }
+
+    .info__stats {
+
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-self: normal;
+    }
+
+    .stat__item {
+        &-icon {
+            padding: 0.5rem;
+            font-size: 30px;
+            order: 2;
+        }
+
+        &-title {
+            order: 1;
+        }
+
+        &-value {
+            order: 3;
+        }
+    }
+
+    .stat__item {
+        flex-direction: column;
+        align-items: center;
+        min-width: 0 !important;
+    }
+
+    .info__comments {
+        .comment {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+            &__info {
+                margin: 2rem;
+            }
+
+            &__author {
+                font-size: $titleText;
+            }
+
+            &__text {
+                font-size: $innerSmallText;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1140px) {
+
+    .info-section {
+        max-width: 1140px;
+        flex-direction: row;
+    }
+
+    .info__stats {
+        width: 50%;
+        border-bottom: none;
+        border-right: 2px solid white;
+        margin-right: 3rem;
+    }
+
+    .stat__item {
+        width: 50%;
+        &-icon {
+            padding: 0.5rem;
+            font-size: 30px;
+            order: 2;
+        }
+
+        &-title {
+            order: 1;
+        }
+
+        &-value {
+            order: 3;
+        }
+    }
+
+    .stat__item {
+        flex-direction: column;
+        align-items: center;
+        min-width: 0 !important;
+    }
+
+    .info__comments {
+        .comment {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+            &__info {
+                margin: 2rem;
+            }
+
+            &__author {
+                font-size: $titleText;
+            }
+
+            &__text {
+                font-size: $innerSmallText;
+            }
+        }
+    }
+}
